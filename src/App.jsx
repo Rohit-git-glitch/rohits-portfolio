@@ -7,14 +7,14 @@ import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
-    </>
+    </main>
   )
 }
 
