@@ -75,21 +75,20 @@ function Hero() {
       className="min-h-screen flex items-center px-6"
     >
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
         {/* LEFT SIDE */}
 
-        <div>
+        <div  className="md:pl-6">
 
 
           <motion.p
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-xl"
+            className="text-xl md:text-2xl font-medium text-gray-400"
           >
-            Hey there, I'm
+            Hey,there!
           </motion.p>
 
 
@@ -98,9 +97,21 @@ function Hero() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl font-bold mt-3"
+            className="mt-3 leading-none"
           >
-            Rohit Hajare
+
+            <span className="block text-6xl md:text-8xl font-extrabold text-white">
+              I am
+            </span>
+
+            <span className="block mt-2 text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
+              Rohit
+            </span>
+
+            <span className="block mt-1 text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
+              Hajare
+            </span>
+
           </motion.h1>
 
 
@@ -109,9 +120,9 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-3xl mt-5 font-semibold text-gray-700"
+            className="mt-8 text-xl md:text-2xl font-medium text-gray-400"
           >
-            Student
+            Computer Engineering Student
           </motion.h2>
 
 
@@ -120,8 +131,8 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl mt-3 font-bold text-blue-600"
-          >
+            className="mt-3 text-3xl md:text-5xl font-bold text-cyan-400 h-16"
+            >
             {text}
 
             <span className="animate-pulse">
@@ -132,11 +143,10 @@ function Hero() {
 
 
 
-          <p className="mt-6 text-gray-600 text-lg leading-8 max-w-xl">
+          <p className="mt-8 max-w-xl text-lg leading-8 text-gray-400">
 
-            I build modern web applications and scalable
-            backend systems using React, Node.js and MongoDB.
-            Passionate about technology, cloud and artificial intelligence.
+            Passionate about building scalable backend systems and modern web applications.
+            Currently exploring Cloud Computing, Artificial Intelligence, and solving Data Structures & Algorithms problems to become a well-rounded software engineer.
 
           </p>
 
@@ -176,44 +186,69 @@ function Hero() {
 
 
         </div>
+        {/* RIGHT SIDE */}
 
-            {/* RIGHT SIDE */}
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="relative flex justify-center items-center"
+        >
 
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="flex justify-center"
-            >
+          {/* Glow */}
+          <div className="absolute w-72 h-72 bg-blue-400/20 blur-3xl rounded-full"></div>
 
+          {/* React Badge */}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+            className="absolute -top-6 left-10 px-4 py-2 bg-slate shadow-lg rounded-full"
+          >
+            React
+          </motion.div>
 
-              <div className="relative">
+          {/* Node Badge */}
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="absolute bottom-10 -left-8 px-4 py-2 bg-slate shadow-lg rounded-full"
+          >
+            Node.js
+          </motion.div>
 
+          {/* MongoDB Badge */}
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 2.8, repeat: Infinity }}
+            className="absolute top-16 -right-10 px-4 py-2 bg-slate shadow-lg rounded-full"
+          >
+            MongoDB
+          </motion.div>
 
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-blue-400 blur-3xl opacity-20 rounded-full">
-                </div>
+          {/* Express Badge */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 3.2, repeat: Infinity }}
+            className="absolute bottom-4 right-0 px-4 py-2 bg-slate shadow-lg rounded-full"
+          >
+            Express
+          </motion.div>
 
+          
+          {/* Laptop */}
+          <img
+            src={laptop}
+            alt="Laptop"
+            className="relative w-[220px] md:w-[300px] object-contain"
+          />
 
-
-                {/* Laptop Image */}
-                <img
-                  src={laptop}
-                  alt="Coding laptop illustration"
-                  className="relative w-[420px] md:w-[500px] object-contain"
-                />
-
-
-              </div>
-
-
-            </motion.div>
-
+        </motion.div>
+        
+            
+            
       </div>
 
 

@@ -7,7 +7,7 @@ import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden bg-slate-950 text-white">
       <Navbar />
       <Hero />
       <About />
@@ -15,7 +15,7 @@ function App() {
       <Projects />
       <Contact />
     </main>
-  )
+  );
 }
 
 export default App;
