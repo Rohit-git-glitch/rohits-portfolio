@@ -72,44 +72,33 @@ function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center px-6"
+      className="min-h-screen flex items-start"
     >
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center">
 
         {/* LEFT SIDE */}
 
-        <div  className="md:pl-6">
-
-
-          <motion.p
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-xl md:text-2xl font-medium text-gray-400"
-          >
-            Hey,there!
-          </motion.p>
-
+        <div  className="md:pl-0">
 
 
           <motion.h1
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-3 leading-none"
+            className="mt-3 leading-tight font-extrabold"
           >
 
-            <span className="block text-6xl md:text-8xl font-extrabold text-white">
+            <span className="block text-5xl md:text-6xl">
+              Hey there!
+            </span>
+
+            <span className="block text-5xl md:text-6xl text-white">
               I am
             </span>
 
-            <span className="block mt-2 text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
-              Rohit
-            </span>
-
-            <span className="block mt-1 text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
-              Hajare
+            <span className="block text-5xl md:text-6xl bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
+              Rohit Hajare
             </span>
 
           </motion.h1>
