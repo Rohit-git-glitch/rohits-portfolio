@@ -1,72 +1,105 @@
-const skillGroups = [
+const skills = [
   {
-    title: "Languages",
-    skills: ["C++", "Java", "JavaScript", "Python"]
+    name: "C++",
+    icon: "devicon-cplusplus-plain colored",
+  },
+  
+  {
+    name: "JavaScript",
+    icon: "devicon-javascript-plain colored",
+  },
+ 
+  {
+    name: "HTML",
+    icon: "devicon-html5-plain colored",
   },
   {
-    title: "Frontend",
-    skills: ["React", "Tailwind CSS", "HTML", "CSS"]
+    name: "CSS",
+    icon: "devicon-css3-plain colored",
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express.js", "MongoDB", "REST API"]
+    name: "React",
+    icon: "devicon-react-original colored",
   },
   {
-    title: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Postman"]
-  }
+    name: "Tailwind CSS",
+    icon: "devicon-tailwindcss-original colored",
+  },
+  {
+    name: "Node.js",
+    icon: "devicon-nodejs-plain colored",
+  },
+  {
+    name: "Express.js",
+    icon: "devicon-express-original",
+  },
+  {
+    name: "MongoDB",
+    icon: "devicon-mongodb-plain colored",
+  },
+  {
+    name: "Git",
+    icon: "devicon-git-plain colored",
+  },
+  {
+    name: "GitHub",
+    icon: "devicon-github-original",
+  },
+  {
+    name: "VS Code",
+    icon: "devicon-vscode-plain colored",
+  },
+  {
+    name: "Postman",
+    icon: "devicon-postman-plain colored",
+  },
 ];
-
 
 function Skills() {
   return (
-    <section 
+    <section
       id="skills"
       className="py-20 px-6"
     >
+      <div className="max-w-6xl mx-auto">
 
-      <h2 className="text-4xl font-bold text-center">
-        Skills
-      </h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Skills
+        </h2>
 
-
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
-
-        {
-          skillGroups.map((group) => (
-            <div 
-              key={group.title}
-              className="border rounded-xl p-6"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {skills.map((skill) => (
+            <div
+              key={skill.name}
+              className="
+                border
+                rounded-xl
+                p-6
+                flex
+                flex-col
+                items-center
+                justify-center
+                gap-4
+                hover:-translate-y-2
+                hover:shadow-xl
+                transition-all
+                duration-300
+                cursor-pointer
+              "
             >
+              <i className={`${skill.icon} text-6xl`}></i>
 
-              <h3 className="text-2xl font-semibold mb-4">
-                {group.title}
-              </h3>
-
-
-              <div className="flex flex-wrap gap-3">
-
-                {
-                  group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-4 py-2 rounded-lg bg-gray-100"
-                    >
-                      {skill}
-                    </span>
-                  ))
-                }
-
-              </div>
-
+              <p className="font-medium text-center">
+                {skill.name}
+              </p>
             </div>
-          ))
-        }
+          ))}
+
+        </div>
 
       </div>
-
     </section>
-  )
+  );
 }
 
 export default Skills;

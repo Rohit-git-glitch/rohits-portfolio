@@ -141,39 +141,6 @@ function Hero() {
 
 
 
-          <div className="flex gap-5 mt-8">
-
-
-            <a
-              href="#projects"
-              className="px-6 py-3 bg-black text-white rounded-lg hover:scale-105 transition"
-            >
-              View Projects
-            </a>
-
-
-
-            <a
-              href="/resume.pdf"
-              className="px-6 py-3 border rounded-lg hover:bg-black hover:text-white transition"
-            >
-              Resume
-            </a>
-
-
-          </div>
-
-
-
-          <div className="flex gap-6 mt-8 text-3xl">
-
-            <FaGithub />
-            <FaLinkedin />
-            <SiLeetcode />
-
-          </div>
-
-
         </div>
         {/* RIGHT SIDE */}
 
@@ -226,7 +193,7 @@ function Hero() {
             Express
           </motion.div>
 
-          
+
           {/* Laptop */}
           <img
             src={laptop}
@@ -235,8 +202,6 @@ function Hero() {
           />
 
         </motion.div>
-        
-            
             
       </div>
 
