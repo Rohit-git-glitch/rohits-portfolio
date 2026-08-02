@@ -1,5 +1,37 @@
 import {motion} from "framer-motion";
 import projects from "../data/projects";
+import taskFlowImage from "../assets/taskflow.png";
+// import { SiGithub} from "react-icons/si";
+import { FaTerminal } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiJavascript,
+  SiFirebase,
+  SiPython,
+  SiCplusplus,
+  SiMysql,
+  SiGithub,
+} from "react-icons/si";
+
+const techIcons = {
+  React: <SiReact className="text-sky-400 text-2xl" />,
+  "Node.js": <SiNodedotjs className="text-green-500 text-2xl" />,
+  "Express.js": <SiExpress className="text-white text-2xl" />,
+  // "Express.js": <FaTerminal className="text-gray-300 text-2xl" />,
+  MongoDB: <SiMongodb className="text-green-600 text-2xl" />,
+  Tailwind: <SiTailwindcss className="text-cyan-400 text-2xl" />,
+  JavaScript: <SiJavascript className="text-yellow-400 text-2xl" />,
+  Python: <SiPython className="text-yellow-300 text-2xl" />,
+  Firebase: <SiFirebase className="text-orange-400 text-2xl" />,
+  "C++": <SiCplusplus className="text-blue-500 text-2xl" />,
+  MySQL: <SiMysql className="text-blue-400 text-2xl" />,
+};
+
 
 function Projects() {
   return (
@@ -13,7 +45,7 @@ function Projects() {
       </h2>
 
 
-      <div className="max-w-4xl mx-auto mt-12">
+      <div className="max-w-7xl mx-auto mt-12 grid md:grid-cols-2 gap-8">
 
         {
           projects.map((project) => (
@@ -27,13 +59,13 @@ function Projects() {
             >
 
               {/* Image Section */}
-              <div className="h-64 bg-gray-200 flex items-center justify-center">
+              <div className="h-40 overflow-hidden bg-slate-900">
 
                 {
-                  project.image ? (
+                  taskFlowImage ? (
                     <img
-                      src={project.image}
-                      alt={project.title}
+                      src={taskFlowImage}
+                      alt={taskFlowImage}
                       className="w-full h-full object-cover"
                     />
                   ) : (
@@ -49,69 +81,51 @@ function Projects() {
               {/* Content Section */}
               <div className="p-8">
 
-                <h3 className="text-3xl font-bold">
+                <h3 className="text-xl font-bold">
                   {project.title}
                 </h3>
 
 
-                <p className="mt-4 text-gray-600">
+                <p className="text-sm line-climp-2 text-gray-600">
                   {project.description}
                 </p>
 
+                <div className="flex items-center gap-4 mt-5">
 
-                <div className="flex flex-wrap gap-3 mt-6">
-
-                  {
-                    project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-4 py-2 rounded-full border text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))
-                  }
+                  {project.technologies.map((tech) => (
+                    <div
+                      key={tech}
+                      title={tech}
+                      className="hover:scale-110 transition duration-300"
+                    >
+                      {techIcons[tech]}
+                    </div>
+                  ))}
 
                 </div>
 
 
-                <div className="mt-6">
-
-                  <h4 className="text-xl font-semibold">
-                    Features
-                  </h4>
-
-
-                  <ul className="mt-3 list-disc ml-5 text-gray-600">
-
-                    {
-                      project.features.map((feature) => (
-                        <li key={feature}>
-                          {feature}
-                        </li>
-                      ))
-                    }
-
-                  </ul>
-
-                </div>
-
-
-                <div className="mt-8 flex gap-4">
+                <div className="mt-4 flex gap-4">
 
                   <a
                     href={project.github}
-                    className="px-5 py-2 bg-black text-white rounded-lg hover:scale-105 transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:scale-105 transition"
                   >
-                    GitHub
+                    <SiGithub className="text-lg" />
+                    <span>GitHub</span>
                   </a>
 
 
                   <a
                     href={project.live}
-                    className="px-5 py-2 border rounded-lg hover:bg-black hover:text-white transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-gray-600 rounded-lg hover:bg-white hover:text-black transition"
                   >
-                    Live Demo
+                    <FaExternalLinkAlt className="text-sm" />
+                    <span>Live Demo</span>
                   </a>
 
                 </div>

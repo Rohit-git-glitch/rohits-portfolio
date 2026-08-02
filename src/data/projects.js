@@ -6,24 +6,12 @@ const projects = [
             "A full-stack task management application with secure JWT authentication and complete CRUD functionality.",
 
         technologies: [
-            "React",
-            "Tailwind CSS",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
-            "JWT"
+            "React","Node.js","Express.js","MongoDB","JWT"
         ],
 
-        features: [
-            "User Authentication",
-            "Protected Routes",
-            "Task CRUD Operations",
-            "Responsive Design"
-        ],
-
-        github: "#",
+        github: "https://github.com/Rohit-git-glitch/Task-Flow-fullstack",
         live: "#",
-        image: "/taskflow.png"  //Image part
+        image: "taskFlowImage"  //Image part
     }
 ];
 
