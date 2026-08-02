@@ -8,7 +8,7 @@ const educationData = [
         duration: "2024 - Present",
         title: "B.Tech Information Technology",
         institute: "International Institute of Information Technology (I²IT), Pune",
-        details: "Savitribai Phule Pune University",
+        details: "Savitribai Phule Pune University , 1st Year CGPA: 9.6 | 2nd Year CGPA: 9.16",
     },
     {
         logo: HSC,
@@ -40,7 +40,7 @@ function Education() {
                     </h2>
 
                     <p className="text-gray-400 mt-4 text-lg">
-                        My Academic Journey
+                        My Academic Journey , so far
                     </p>
                 </div>
 
