@@ -59,7 +59,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 px-6"
+      className="py-16 px-6"
     >
       <div className="max-w-6xl mx-auto">
 

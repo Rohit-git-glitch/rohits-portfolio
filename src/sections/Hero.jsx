@@ -75,7 +75,7 @@ function Hero() {
       className="min-h-screen flex items-start"
     >
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-40 items-center">
 
         {/* LEFT SIDE */}
 
@@ -86,18 +86,19 @@ function Hero() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-3 leading-tight font-extrabold"
+            className="mt-3 leading-normal font-extrabold"
           >
 
-            <span className="block text-5xl md:text-6xl">
-              Hey there!
+            <span className="block text-6xl md:text-7xl">
+              Hey, there!
             </span>
+            
 
-            <span className="block text-5xl md:text-6xl text-white">
+            <span className="block text-6xl md:text-7xl text-white">
               I am
             </span>
 
-            <span className="block text-5xl md:text-6xl bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
+            <span className="block text-6xl md:text-7xl bg-gradient-to-r from-blue-500 via-cyan-400 to-sky-300 bg-clip-text text-transparent">
               Rohit Hajare
             </span>
 
@@ -134,13 +135,10 @@ function Hero() {
 
           <p className="mt-8 max-w-xl text-lg leading-8 text-gray-400">
 
-            Passionate about building scalable backend systems and modern web applications.
-            Currently exploring Cloud Computing, Artificial Intelligence, and solving Data Structures & Algorithms problems to become a well-rounded software engineer.
-
-          </p>
+            Building scalable backend systems and modern web applications. Exploring Cloud, AI, and DSA every day
 
 
-
+        </p>
         </div>
         {/* RIGHT SIDE */}
 

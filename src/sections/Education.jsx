@@ -12,14 +12,14 @@ const educationData = [
     },
     {
         logo: HSC,
-        duration: "2021 - 2024",
+        duration: "2022 - 2024",
         title: "Higher Secondary Education",
         institute: "SSRBJC College , Lonikand",
         details: "Maharashtra Board , Percentage: 80%",
     },
     {
         logo: schoolLogo,
-        duration: "2020 - 2021",
+        duration: "2021 - 2022",
         title: "SSC",
         institute: "Friends Education Institute",
         details: "Maharashtra State Board , Percentage: 86% ",
