@@ -6,3 +6,18 @@ html {
 body {
     font-family: "Inter", sans-serif;
 }
+@keyframes edu-float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.edu-float {
+    animation: edu-float 4s ease-in-out infinite;
+}

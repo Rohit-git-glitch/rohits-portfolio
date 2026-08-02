@@ -1,3 +1,4 @@
+import EducationLottie from "../components/EducationLottie";
 import i2itLogo from "../assets/i2itLogo.png";
 import HSC from "../assets/HSC.png";
 import schoolLogo from "../assets/schoolLogo.png";
@@ -49,9 +50,7 @@ function Education() {
                     {/* Left Side */}
                     <div className="flex justify-center items-center h-[500px] rounded-3xl border">
 
-                        <p className="text-gray-500 text-xl">
-                            Laptop Animation Here
-                        </p>
+                        <EducationLottie />
 
                     </div>
 
