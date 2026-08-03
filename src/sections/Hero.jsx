@@ -72,7 +72,8 @@ function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-start"
+      //className="min-h-screen flex items-start"
+      className="min-h-[80vh] flex items-center"
     >
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-40 items-center">

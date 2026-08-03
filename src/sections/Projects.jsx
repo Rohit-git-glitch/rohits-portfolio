@@ -18,6 +18,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 
+
 const techIcons = {
   React: <SiReact className="text-sky-400 text-2xl" />,
   "Node.js": <SiNodedotjs className="text-green-500 text-2xl" />,
@@ -117,7 +118,15 @@ function Projects() {
                     <span>GitHub</span>
                   </a>
 
-
+                  <button
+                    disabled
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-gray-600 rounded-lg opacity-50 cursor-not-allowed"
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    <span>Live Demo (Coming Soon)</span>
+                  </button>
+                  
+                  {/* //! after deployed change into following
                   <a
                     href={project.live}
                     target="_blank"
@@ -126,7 +135,7 @@ function Projects() {
                   >
                     <FaExternalLinkAlt className="text-sm" />
                     <span>Live Demo</span>
-                  </a>
+                  </a> */}
 
                 </div>
 
